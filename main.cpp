@@ -5,15 +5,13 @@
 using namespace std;
 #include "ItemToPurchase.h"
 #include "ShoppingCart.h"
-
-
     
 
 void PrintMenu() {
    /* Type your code here */
    //given by zybooks instructions
     cout << "a - Add item to cart" << endl;
-    cout <<"d - Remove item from cart" << endl;
+    cout << "d - Remove item from cart" << endl;
     cout << "c - Change item quantity" << endl;
     cout << "i - Output items' descriptions" << endl;
     cout << "o - Output shopping cart" << endl;
@@ -64,7 +62,7 @@ void ExecuteMenu(char selection, ShoppingCart& theCart) {
             getline(cin, itemName);
             cout << "Enter the new quantity" << endl;
             cin >> itemQuantity;
-            ModifyItem().SetQuantity(itemQuantity);
+            theCart.ModifyItem(itemName, itemQuantity);
         }
         case 'i' : {
             PrintDescription(theCart);
