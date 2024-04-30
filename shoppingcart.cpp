@@ -1,12 +1,10 @@
-/*Caed Barron; added step 2 of the code from zybooks for SC.cpp file8/
-
-//wored in VSCode and then copied to github
-
+//Caed Barron ; work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include "shoppingcart.h"
 #include <iomanip>
 #include <string>
 #include <vector>
+using namespace std;
 #include "ItemToPurchase.h"
 
 using namespace std;
@@ -28,14 +26,14 @@ double GetCost(double itemCost){
     return itemCost;
 }
 string GetDescription(string itemDescription){
-    return itemDescription
+    return itemDescription;
 }
 
 //getters
-string GetCustomerName(string customerName){
+string ShoppingCart::GetCustomerName(string customerName){
     return customerName;
 }
-string GetDate(string currentDate){
+string ShoppingCart::GetDate(string currentDate){
     return currentDate;
 }
 //adds the item to the cart by adding it to the vector
@@ -45,11 +43,11 @@ void AddItem(string item){
         cartItems.push_back(i);
     }}
 //takes the item and cycles through till it has a match and then removes it
-void RemoveItem(string itemName){
+void ShoppingCart::RemoveItem(string item){
     vector<string> cartItems;
     for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == itemName) {
-            cartItems.at(i).pop_back;
+            cartItems.at(i).erase(); //removes the item, pop_back does not work here
         } else {
             cout << "Item not found in cart. Nothing removed." << endl;
         }}}
@@ -102,5 +100,3 @@ void PrintDescription(){
 
 
 
-
-  
