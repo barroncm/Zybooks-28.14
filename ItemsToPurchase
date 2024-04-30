@@ -1,1 +1,63 @@
+//Caed Barron 4/30/2024 added the step 1 itemstopurchase.cpp
 
+//code was written in VSCode and then copied to Github for the collaboration element of this assignment
+
+#include <iostream>
+#include "ItemToPurchase.h"
+#include <iomanip>
+#include <string>
+using namespace std;
+
+    string name = "";
+    int quantity = 0;
+    double cost = 0;
+    string description = "";
+
+ItemToPurchase::ItemToPurchase(){  
+}
+
+
+//setters for basic elements
+void SetName(string itemName){
+    itemName = name;
+}
+
+void SetCost(double itemCost){
+    itemCost = cost;
+}
+
+void SetQuantity(int itemQuantity){
+    itemQuantity = quantity;
+}
+//added in step 1 of instructions
+void SetItemDescription(string itemDescription){
+    itemDescription = description;
+}
+
+//getters for basic elements
+string GetName(string name){
+    return name;
+}
+int GetQuantity(int quantity){
+    return quantity;
+}
+double GetCost(double cost){
+    return cost;
+}
+
+//print functions requested in the instructions
+
+/*not sure what the format zybooks will want these to print in because it is very picky; 
+however, these are just filling in and can adjust later*/
+
+void PrintItemCost(double itemCost){
+    cout << "Here is the cost: " << itemCost << endl;
+}
+
+void PrintItemCost(int itemQuantity){
+    cout << "Here is the quantity: " << itemQuantity << endl;
+}
+
+void PrintItemDescription(string description){
+    cout << "Description of the item: " << description << endl;
+}
