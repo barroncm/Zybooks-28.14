@@ -46,15 +46,20 @@ void AddItem(string item){
 void ShoppingCart::RemoveItem(string item){
     vector<string> cartItems;
     for( int i = 0; i < cartItems.size(); i++){
-        if(cartItems.at(i).GetName() == itemName) {
+        if(cartItems.at(i).GetName() == item) {
             cartItems.at(i).erase(); //removes the item, pop_back does not work here
         } else {
             cout << "Item not found in cart. Nothing removed." << endl;
         }}}
     
-void ModifyItem(string item){
-       
-}
+void ModifyItem(string item, int newQuantity){
+    vector<string> cartItems;
+     for( int i = 0; i < cartItems.size(); i++){
+        if(cartItems.at(i).GetName() == item) {
+            cartItems.at(i).SetQuantity(newQuantity)
+        } else {
+            cout << "Item not found in cart. Nothing removed." << endl;
+        }}}
 //simple fucntion that counts the number of items in the cart and omits ""s
 int GetNumItemsInCart(){
     vector<string> cartItems;
