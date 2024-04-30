@@ -1,7 +1,4 @@
-//Caed Barron 4/30/2024 added the step 1 itemstopurchase.cpp
-
-//code was written in VSCode and then copied to Github for the collaboration element of this assignment
-
+//Caed Barron ; work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include "ItemToPurchase.h"
 #include <iomanip>
