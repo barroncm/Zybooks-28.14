@@ -49,13 +49,13 @@ void ItemToPurchase::PrintItemCost(){
     cout << name << " " << quantity << "$" price << "=$" << price*quantity << endl;
 }
 
-void ItemToPurchase::PrintItemQuantity() const {
+void ItemToPurchase::PrintItemQuantity() {
     cout << "Quantity: " << quantity << endl;
 }
 
-void PrintItemDescription() const {
+void PrintItemDescription()  {
     cout << name << ": " << description << endl;
 }
  
-string ItemToPurchase::GetDescription() const {
+string ItemToPurchase::GetDescription(){
 return description;}
