@@ -55,3 +55,5 @@ void PrintItemDescription(string& description){
     cout << "Description of the item: " << description << endl;
 }
  do these in a second*/ 
+string ItemToPurchase::GetDescription() const {
+return description;}
