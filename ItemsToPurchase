@@ -16,7 +16,7 @@ ItemToPurchase::ItemToPurchase(){
 
 //setters for basic elements
 //backwards
-void ItemToPurchase::SetName(string itemName){
+void ItemToPurchase::SetName(string& itemName){
     name = itemName;
 }
 
@@ -28,7 +28,7 @@ void ItemToPurchase::SetQuantity(int itemQuantity){
     quantity = itemQuantity;
 }
 //added in step 1 of instructions
-void ItemToPurchase::SetItemDescription(string itemDescription){
+void ItemToPurchase::SetItemDescription(string& itemDescription){
     description = itemDescription;
 }
 
@@ -56,6 +56,6 @@ void ItemToPurchase::PrintItemCost(int itemQuantity){
     cout << "Here is the quantity: " << itemQuantity << endl;
 }
 
-void PrintItemDescription(string description){
+void PrintItemDescription(string& description){
     cout << "Description of the item: " << description << endl;
 }
