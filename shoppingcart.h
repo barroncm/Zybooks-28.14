@@ -26,8 +26,9 @@ class ShoppingCart{
         void PrintDescriptions()const;
  private:
 
-        string currentDate;
+       
         string customerName;
+        string currentDate;
         vector<ItemToPurchase> cartItems;
         
 
