@@ -59,13 +59,16 @@ double ShoppingCart::GetCostOfCart() const {
 }
 //takes the total find in GetCostOfCart() function and prints that while checking to make sure the cart has something in it
 void ShoppingCart::PrintTotal () const {
-    //just make this .empty()
+    cout << customerName << "'s Shopping Cart - " << currentDate << endl;
+        cout << "Number of Items:"  << GetNumItemsInCart() << endl << endl;
+        //just make this .empty()
    if (cartItems.empty()){
        cout << "SHOPPING CART IS EMPTY" << endl;}
     else {
         //zybooks desired format
-        cout << customerName << "'s Shopping Cart - " << currentDate << endl;
-        cout << "Number of Items:"  << GetNumItemsInCart() << endl << endl;
+        for (const ItemToPurchase& item : cartItems){
+                item.PrintItemCost();}
+        cout << endl;
         cout << "Total: $:" << GetCostOfCart() << endl;
    }
 }
