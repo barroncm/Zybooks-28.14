@@ -29,7 +29,8 @@ void ShoppingCart::AddItem(const ItemToPurchase& item){
 void ShoppingCart::RemoveItem(const string& itemName){
     for( unsigned int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == itemName) {
-            cartItems.at(i).erase(); }
+                //fixed this btw
+            cartItems.erase(cartItems.begin()+i); }
             return;
         } }
     
