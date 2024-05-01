@@ -14,7 +14,7 @@ int count;
 //multiple constructors
 ShoppingCart::ShoppingCart() : customerName("none"), currentDate("January 1, 2016"){}
 
-ShoppingCart::ShoppingCart(string customerName, string currentDate) : customerName(customerName), currentDate(currentDate){}
+ShoppingCart::ShoppingCart(string& customerName, string& currentDate) : customerName(customerName), currentDate(currentDate){}
 
 
 //getters from item files
@@ -41,13 +41,13 @@ string ShoppingCart::GetDate(string currentDate){
 }
 //adds the item to the cart by adding it to the vector
 //connected to shopping cart class and the item to purchase item
-void ShoppingCart::AddItem(ItemToPurchase item){
+void ShoppingCart::AddItem(ItemToPurchase& item){
     //i don't think the for loop is necessary here
     for(int i = 0; i < cartItems.size(); i++){
         cartItems.push_back(i);
     }}
 //takes the item and cycles through till it has a match and then removes it
-void ShoppingCart::RemoveItem(string itemName){
+void ShoppingCart::RemoveItem(string& itemName){
     for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item) {
             cartItems.at(i).erase(); 
@@ -55,7 +55,7 @@ void ShoppingCart::RemoveItem(string itemName){
             cout << "Item not found in cart. Nothing removed." << endl;
         }}}
     
-void ShoppingCart::ModifyItem(ItemToPurchase item){
+void ShoppingCart::ModifyItem(ItemToPurchase& item){
      for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item.GetName()) {
             cartItems.at(i).SetQuantityitem.GetQuantity());
