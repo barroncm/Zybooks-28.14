@@ -1,12 +1,7 @@
 //work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include "ShoppingCart.h"
-#include <iomanip>
-#include <string>
-#include <vector>
-using namespace std;
-#include "ItemToPurchase.h"
-//im pretty sure you don't need all those but i suppose it won't cause problems
+
 using namespace std;
 
 int count;
@@ -41,28 +36,30 @@ string ShoppingCart::GetDate() const {
 }
 //adds the item to the cart by adding it to the vector
 //connected to shopping cart class and the item to purchase item
+
+
 void ShoppingCart::AddItem(const ItemToPurchase& item){
-    //i don't think the for loop is necessary here
-    for(int i = 0; i < cartItems.size(); i++){
-        cartItems.push_back(i);
-    }}
+        cartItems.push_back(item);
+    }
+
+
 //takes the item and cycles through till it has a match and then removes it
 void ShoppingCart::RemoveItem(const string& itemName){
     for( int i = 0; i < cartItems.size(); i++){
-        if(cartItems.at(i).GetName() == item) {
+        if(cartItems.at(i).GetName() == itemName) {
             cartItems.at(i).erase(); 
-        } else {
-            cout << "Item not found in cart. Nothing removed." << endl;
-        }}}
+            return;
+        } }
     
 void ShoppingCart::ModifyItem(const ItemToPurchase& item){
      for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item.GetName()) {
-            cartItems.at(i).SetQuantityitem.GetQuantity());
-        } else {
-            cout << "Item not found in cart. Nothing removed." << endl;
-        }}}
+            cartItems.at(i).SetQuantity(item.GetQuantity());
+            return
+        } }
+
 //simple fucntion that counts the number of items in the cart and omits ""s
+
 int ShoppingCart::GetNumItemsInCart() const {
     for (int i = 0; i < cartItems.size(); i++){
         if (cartItems.at(i) != ""){
@@ -75,7 +72,7 @@ int ShoppingCart::GetNumItemsInCart() const {
 double ShoppingCart::GetCostOfCart() const {
     double total = 0;
     for (int i = 0; i < cartItems.size(); i++){
-        total = total + cartItems.at(i).GetCost()*cartItems.at(i).GetQuantity();
+        total = total + item.GetCost()*item.GetQuantity();
 
     }
     return total;
@@ -89,13 +86,13 @@ void ShoppingCart::PrintTotal () const {
         //zybooks desired format
         cout << customerName << "'s Shopping Cart - " << current Date << endl;
         cout << "Number of Items: : << GetNumItemsInCart() << endl << endl;
-        cout << "Total: $: << GetCostOfCart() << endl;
+        cout << "Total: $:" << GetCostOfCart() << endl;
    }
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
 void ShoppingCart::PrintDescription() const {
     for(int i = 0; i < cartItems.size(); i++){
-        cout << cartItems.at(i).GetName() << cartItems.at(i).GetDescription() << endl;
+        cout << item.GetName() << item.GetDescription() << endl;
     }
 }
     
