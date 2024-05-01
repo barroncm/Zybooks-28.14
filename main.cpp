@@ -75,6 +75,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
         case 'i' : {
             //needs to reference the cart on the other side
             theCart.PrintDescription();
+            break;
         }
         case'o': {
             //same issue
