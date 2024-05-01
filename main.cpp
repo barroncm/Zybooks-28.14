@@ -104,14 +104,14 @@ int main() {
    getline(cin, currentDate);
     ShoppingCart theCart(customerName, currentDate);
     char option;
-    cin >> option;
     //have to use single quotes here
   
     //im pretty sure this should be do while because the do while needs to check condition at the end
     do {
         PrintMenu();
         cin >> option;
-        ExecuteMenu(option, theCart);
+        if (option != 'q'){
+            ExecuteMenu(option, theCart);}
 
     }while (option != 'q');
   
