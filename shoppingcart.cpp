@@ -1,6 +1,7 @@
 //work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include "ShoppingCart.h"
+#include "ItemToPurchase.h"
 
 using namespace std;
 
@@ -68,7 +69,7 @@ void ShoppingCart::PrintTotal () const {
    }
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
-void ShoppingCart::PrintDescription() const {
+void ShoppingCart::PrintDescriptions() const {
     for(const auto& item : cartItems){
         cout << item.GetName() << item.GetDescription() << endl;
     }
