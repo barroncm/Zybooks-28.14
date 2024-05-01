@@ -47,7 +47,7 @@ void ShoppingCart::AddItem(const ItemToPurchase& item){
 void ShoppingCart::RemoveItem(const string& itemName){
     for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == itemName) {
-            cartItems.at(i).erase(); 
+            cartItems.at(i).erase(); }
             return;
         } }
     
@@ -56,7 +56,7 @@ void ShoppingCart::ModifyItem(const ItemToPurchase& item){
         if(cartItems.at(i).GetName() == item.GetName()) {
             cartItems.at(i).SetQuantity(item.GetQuantity());
             return
-        } }
+        } }}
 
 //simple fucntion that counts the number of items in the cart and omits ""s
 
