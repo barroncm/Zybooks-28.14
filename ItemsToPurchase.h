@@ -8,14 +8,14 @@ using namespace std;
 class ItemToPurchase{
     public:
     ItemToPurchase();
-    void setName(string& name);
+    void setName(const string& name);
     void SetCost(double cost);
     void SetQuantity(int quantity);
-    void SetDescription(string& description);
-    string GetName();
-    double GetCost();
-    string GetDescription();
-    int GetQuantity();
+    void SetDescription(const string& description);
+    string GetName() const;
+    double GetCost() const;
+    string GetDescription()const;
+    int GetQuantity()const;
 
     private:
     string name;
