@@ -84,8 +84,8 @@ void ShoppingCart::PrintTotal () const {
        cout << "SHOPPING CART IS EMPTY" << endl;}
     else {
         //zybooks desired format
-        cout << customerName << "'s Shopping Cart - " << current Date << endl;
-        cout << "Number of Items: : << GetNumItemsInCart() << endl << endl;
+        cout << customerName << "'s Shopping Cart - " << currentDate << endl;
+        cout << "Number of Items:"  << GetNumItemsInCart() << endl << endl;
         cout << "Total: $:" << GetCostOfCart() << endl;
    }
 }
