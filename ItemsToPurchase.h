@@ -8,10 +8,10 @@ using namespace std;
 class ItemToPurchase{
     public:
     ItemToPurchase();
-    void setName(string name);
+    void setName(string& name);
     void SetCost(double cost);
     void SetQuantity(int quantity);
-    void SetDescription(string itemDescription);
+    void SetDescription(string& description);
     string GetName();
     double GetCost();
     string GetDescription();
@@ -21,7 +21,7 @@ class ItemToPurchase{
     string name;
     double cost;
     int quantity;
-    string itemDescription = "none";    
+    string description = "none";    
     
 };
 
