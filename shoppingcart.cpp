@@ -26,14 +26,14 @@ void ShoppingCart::AddItem(const ItemToPurchase& item){
 
 //takes the item and cycles through till it has a match and then removes it
 void ShoppingCart::RemoveItem(const string& itemName){
-    for( int i = 0; i < cartItems.size(); i++){
+    for( unsigned int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == itemName) {
             cartItems.at(i).erase(); }
             return;
         } }
     
 void ShoppingCart::ModifyItem(const ItemToPurchase& item){
-     for( int i = 0; i < cartItems.size(); i++){
+     for( unsigned int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item.GetName()) {
             cartItems.at(i).SetQuantity(item.GetQuantity());
             return
