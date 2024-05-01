@@ -1,14 +1,8 @@
 //work done in VSC and the copied to GitHub and Zybooks
-#include <iostream>
-#include "ItemToPurchase.h"
-#include <iomanip>
-#include <string>
-using namespace std;
 
-    string name = "";
-    int quantity = 0;
-    double cost = 0;
-    string description = "";
+#include "ItemToPurchase.h"
+
+   
 
 ItemToPurchase::ItemToPurchase() : name(""), cost(0), quantity(0), description("none"){  
 }
@@ -16,6 +10,7 @@ ItemToPurchase::ItemToPurchase() : name(""), cost(0), quantity(0), description("
 
 //setters for basic elements
 //you did it backwards btw
+
 void ItemToPurchase::SetName(const string& itemName){
     name = itemName;
 }
@@ -28,7 +23,7 @@ void ItemToPurchase::SetQuantity(int itemQuantity){
     quantity = itemQuantity;
 }
 //added in step 1 of instructions
-void ItemToPurchase::SetItemDescription(const string& itemDescription){
+void ItemToPurchase::SetDescription(const string& itemDescription){
     description = itemDescription;
 }
 
