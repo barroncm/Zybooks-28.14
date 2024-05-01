@@ -1,4 +1,4 @@
-//Caed Barron ; work done in VSC and the copied to GitHub and Zybooks
+//work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -20,7 +20,7 @@ void PrintMenu() {
    
 }
 //given line below from zybooks
-void ExecuteMenu(char selection, ShoppingCart& theCart) {
+void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
    string itemName;
    string itemDescription;
@@ -28,8 +28,8 @@ void ExecuteMenu(char selection, ShoppingCart& theCart) {
    int itemQuantity;
 
    cin >> selection;
-
-    switch(selection){
+//added breaks
+    switch(option){
         case 'a' : {
             cout << "ADD ITEM TO CART" << endl;
             cout << "Enter the item name" << endl;
@@ -47,6 +47,7 @@ void ExecuteMenu(char selection, ShoppingCart& theCart) {
             nextItem.SetCost(itemCost);
             nextItem.SetQuantity(itemQuantity);
             theCart.AddItem(nextItem);
+            break;
 
         }
         case 'd' : {
@@ -55,25 +56,39 @@ void ExecuteMenu(char selection, ShoppingCart& theCart) {
           
             getline(cin, itemName);
             theCart.RemoveItem(itemName);
+            break;
             }
+        
         case 'c' : {
             cout << "CHANGE ITEM QUANTITY" << endl;
             cout << "Enter the item name:" << endl;
             getline(cin, itemName);
             cout << "Enter the new quantity" << endl;
             cin >> itemQuantity;
-            theCart.ModifyItem(itemName, itemQuantity);
+           //this needs be done differently
+            ItemToPurchase modifiedItem;
+            modifiedItem.SetName(itemName);
+            modifiedItem.SetQuantity(itemQuantity);
+            theCart.ModifyItem(modifiedItem);
+            break;
         }
         case 'i' : {
-            PrintDescription(theCart);
+            //needs to reference the cart on the other side
+            theCart.PrintDescription();
         }
+        case'o': {
+            //same issue
+            theCart.PrintTotal();
+            break;}
         
         case 'q' : {
             cout << "QUIT" << endl;
+            break;
         }
         //placeholder...will have to check what zybooks wants
         default : {
             cout << "Invalid entry" << endl;
+            break;
         }
         }
     
@@ -91,12 +106,14 @@ int main() {
     char option;
     cin >> option;
     //have to use single quotes here
-    while(option != 'q'){
+  
+    //im pretty sure this should be do while because the do while needs to check condition at the end
+    do {
         PrintMenu();
         cin >> option;
         ExecuteMenu(option, theCart);
 
-    }
+    }while (option != 'q');
   
    
    return 0;
