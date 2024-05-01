@@ -14,14 +14,14 @@ class ShoppingCart{
         vector <ItemToPurchase> cartItems;
     public:
         ShoppingCart();
-        ShoppingCart(string customerName, string currentDate);
+        ShoppingCart(string& customerName, string& currentDate);
         
         string GetCustomerName(string customerName);
        
-        void AddItem(ItemToPurchase item);
+        void AddItem(ItemToPurchase& item);
         string GetDate();
-        void RemoveItem(string itemName);
-        void ModifyItem(ItemToPurchase item);
+        void RemoveItem(string& itemName);
+        void ModifyItem(ItemToPurchase& item);
         double GetCost(double itemCost);
         int GetQuantity(int itemQuantity);
         string GetName();
