@@ -27,7 +27,6 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    string itemDescription;
    double itemCost;
    int itemQuantity;
-    cout << "Choose an option:" << endl;
    cin >> option;
 //added breaks
     switch(option){
@@ -102,19 +101,23 @@ int main() {
    getline(cin, customerName);
    cout << "Enter today's date:" << endl << endl;
    getline(cin, currentDate);
-    ShoppingCart theCart(customerName, currentDate);
+   
     char option;
     cout << "Customer name: " << customerName << endl;
     cout << "Today's date: " << currentDate << endl << endl;
-    //have to use single quotes here
-  
+    ShoppingCart theCart(customerName, currentDate);
+    cout << endl;
+    PrintMenu();
+    cout << endl;
     //im pretty sure this should be do while because the do while needs to check condition at the end
     // i do not think that it matters but let me check
-    while (option != 'q'){
-        PrintMenu();
+    do {
+        cout << "Choose an option: " << endl;
         cin >> option;
         if (option != 'q'){
-            ExecuteMenu(option, theCart);}}
+            ExecuteMenu(option, theCart);
+            PrintMenu();}         
+    }while (option != 'q');
   
    
    return 0;
