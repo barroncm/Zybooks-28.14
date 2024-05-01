@@ -14,40 +14,40 @@ int count;
 //multiple constructors
 ShoppingCart::ShoppingCart() : customerName("none"), currentDate("January 1, 2016"){}
 
-ShoppingCart::ShoppingCart(string& customerName, string& currentDate) : customerName(customerName), currentDate(currentDate){}
+ShoppingCart::ShoppingCart(const string& customerName, const string& currentDate) : customerName(customerName), currentDate(currentDate){}
 
 
 //getters from item files
-string ShoppingCart::GetName(string itemName){
+string ShoppingCart::GetName() const{
     return itemName;
 }
-int ShoppingCart::GetQuantity(int itemQuantity){
+int ShoppingCart::GetQuantity() const{
     return itemQuantity;
 
 }
-double ShoppingCart::GetCost(double itemCost){
+double ShoppingCart::GetCost() const{
     return itemCost;
 }
-string ShoppingCart::GetDescription(string itemDescription){
+string ShoppingCart::GetDescription() const{
     return itemDescription;
 }
 
 //getters
-string ShoppingCart::GetCustomerName(string customerName){
+string ShoppingCart::GetCustomerName() const{
     return customerName;
 }
-string ShoppingCart::GetDate(string currentDate){
+string ShoppingCart::GetDate() const {
     return currentDate;
 }
 //adds the item to the cart by adding it to the vector
 //connected to shopping cart class and the item to purchase item
-void ShoppingCart::AddItem(ItemToPurchase& item){
+void ShoppingCart::AddItem(const ItemToPurchase& item){
     //i don't think the for loop is necessary here
     for(int i = 0; i < cartItems.size(); i++){
         cartItems.push_back(i);
     }}
 //takes the item and cycles through till it has a match and then removes it
-void ShoppingCart::RemoveItem(string& itemName){
+void ShoppingCart::RemoveItem(const string& itemName){
     for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item) {
             cartItems.at(i).erase(); 
@@ -55,7 +55,7 @@ void ShoppingCart::RemoveItem(string& itemName){
             cout << "Item not found in cart. Nothing removed." << endl;
         }}}
     
-void ShoppingCart::ModifyItem(ItemToPurchase& item){
+void ShoppingCart::ModifyItem(const ItemToPurchase& item){
      for( int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item.GetName()) {
             cartItems.at(i).SetQuantityitem.GetQuantity());
@@ -63,7 +63,7 @@ void ShoppingCart::ModifyItem(ItemToPurchase& item){
             cout << "Item not found in cart. Nothing removed." << endl;
         }}}
 //simple fucntion that counts the number of items in the cart and omits ""s
-int ShoppingCart::GetNumItemsInCart(){
+int ShoppingCart::GetNumItemsInCart() const {
     for (int i = 0; i < cartItems.size(); i++){
         if (cartItems.at(i) != ""){
             count++;
@@ -72,8 +72,8 @@ int ShoppingCart::GetNumItemsInCart(){
     } return count;
 }
 // multiplies the cost of the item times the number of items and then adds it to the existing total 
-double ShoppingCart::GetCostOfCart(){
-    double total;
+double ShoppingCart::GetCostOfCart() const {
+    double total = 0;
     for (int i = 0; i < cartItems.size(); i++){
         total = total + cartItems.at(i).GetCost()*cartItems.at(i).GetQuantity();
 
@@ -81,7 +81,7 @@ double ShoppingCart::GetCostOfCart(){
     return total;
 }
 //takes the total find in GetCostOfCart() function and prints that while checking to make sure the cart has something in it
-void ShoppingCart::PrintTotal (){
+void ShoppingCart::PrintTotal () const {
     //just make this .empty()
    if (cartItems.empty()){
        cout << "SHOPPING CART IS EMPTY" << endl;}
@@ -93,7 +93,7 @@ void ShoppingCart::PrintTotal (){
    }
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
-void ShoppingCart::PrintDescription(){
+void ShoppingCart::PrintDescription() const {
     for(int i = 0; i < cartItems.size(); i++){
         cout << cartItems.at(i).GetName() << cartItems.at(i).GetDescription() << endl;
     }
