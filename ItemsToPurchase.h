@@ -17,9 +17,9 @@ class ItemToPurchase{
     double GetPrice() const;
     string GetDescription()const;
     int GetQuantity()const;
-    void PrintItemCost() const;
-    void PrintItemQuantity() const;
-    void PrintItemDescription() const;
+    void PrintItemCost() ;
+    void PrintItemQuantity() ;
+    void PrintItemDescription() ;
 
     private:
     string name;
