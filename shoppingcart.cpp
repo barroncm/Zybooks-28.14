@@ -53,7 +53,7 @@ int ShoppingCart::GetNumItemsInCart() const {
 double ShoppingCart::GetCostOfCart() const {
     double total = 0;
     for (const auto& item : cartItems){
-        total = total + item.GetCost()*item.GetQuantity();
+        total = total + item.GetPrice()*item.GetQuantity();
     }
     return total;
 }
