@@ -61,19 +61,16 @@ void ShoppingCart::ModifyItem(const ItemToPurchase& item){
 //simple fucntion that counts the number of items in the cart and omits ""s
 
 int ShoppingCart::GetNumItemsInCart() const {
-    for (int i = 0; i < cartItems.size(); i++){
-        if (cartItems.at(i) != ""){
-            count++;
-        }
+    for (const auto& item : cartItems){
+        count = count + item.GetQuantity();
 
     } return count;
 }
 // multiplies the cost of the item times the number of items and then adds it to the existing total 
 double ShoppingCart::GetCostOfCart() const {
     double total = 0;
-    for (int i = 0; i < cartItems.size(); i++){
+    for (const auto& item : cartItems){
         total = total + item.GetCost()*item.GetQuantity();
-
     }
     return total;
 }
@@ -91,7 +88,7 @@ void ShoppingCart::PrintTotal () const {
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
 void ShoppingCart::PrintDescription() const {
-    for(int i = 0; i < cartItems.size(); i++){
+    for(const auto& item : cartItems){
         cout << item.GetName() << item.GetDescription() << endl;
     }
 }
