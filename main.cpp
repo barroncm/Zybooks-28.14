@@ -27,7 +27,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    double itemCost;
    int itemQuantity;
 
-   cin >> selection;
+   cin >> option;
 //added breaks
     switch(option){
         case 'a' : {
