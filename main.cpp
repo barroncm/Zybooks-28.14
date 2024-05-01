@@ -10,12 +10,13 @@ using namespace std;
 void PrintMenu() {
    /* Type your code here */
    //given by zybooks instructions
+    cout << "MENU" << endl;
     cout << "a - Add item to cart" << endl;
     cout << "d - Remove item from cart" << endl;
     cout << "c - Change item quantity" << endl;
     cout << "i - Output items' descriptions" << endl;
     cout << "o - Output shopping cart" << endl;
-    cout << "q - Quit" << endl;
+    cout << "q - Quit" << endl << endl;
 
    
 }
@@ -26,7 +27,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    string itemDescription;
    double itemCost;
    int itemQuantity;
-
+    cout << "Choose an option:" << endl;
    cin >> option;
 //added breaks
     switch(option){
@@ -101,10 +102,12 @@ int main() {
     string currentDate;
    cout << "Enter customer's name:" << endl;
    getline(cin, customerName);
-   cout << "Enter today's date:" << endl;
+   cout << "Enter today's date:" << endl << endl;
    getline(cin, currentDate);
     ShoppingCart theCart(customerName, currentDate);
     char option;
+    cout << "Customer name: " << customerName << endl;
+    cout << "Today's date: " << currentDate << endl << endl;
     //have to use single quotes here
   
     //im pretty sure this should be do while because the do while needs to check condition at the end
