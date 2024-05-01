@@ -6,10 +6,7 @@ using namespace std;
 
 
 class ItemToPurchase{
-    string name;
-    double cost;
-    int quantity;
-    string itemDescription = "none";    
+    public:
     ItemToPurchase();
     void setName(string name);
     void SetCost(double cost);
@@ -21,6 +18,10 @@ class ItemToPurchase{
     int GetQuantity();
 
     private:
+    string name;
+    double cost;
+    int quantity;
+    string itemDescription = "none";    
     
 };
 
