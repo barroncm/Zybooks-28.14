@@ -28,7 +28,7 @@ class ShoppingCart{
 
         string currentDate;
         string customerName;
-        vector <ItemToPurchase> cartItems;
+        vector<ItemToPurchase> cartItems;
         
 
 
