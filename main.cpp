@@ -25,7 +25,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    /* Type your code here */
    string itemName;
    string itemDescription;
-   double itemCost;
+   double itemPrice;
    int itemQuantity;
    cin >> option;
 //added breaks
@@ -37,14 +37,14 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
              cout << "Enter the item description" << endl;
             getline(cin, itemDescription);
              cout << "Enter the item price:" << endl;
-            cin >> itemCost;
+            cin >> itemPrice;
             cout << "Enter the item quantity" << endl;
             cin >> itemQuantity;
     
             ItemToPurchase nextItem;
             nextItem.SetName(itemName);
             nextItem.SetDescription(itemDescription);
-            nextItem.SetCost(itemCost);
+            nextItem.SetPrice(itemCost);
             nextItem.SetQuantity(itemQuantity);
             theCart.AddItem(nextItem);
             break;
