@@ -9,17 +9,17 @@ class ItemToPurchase{
     public:
     ItemToPurchase();
     void SetName(const string& name);
-    void SetCost(double cost);
+    void SetPrice(double price);
     void SetQuantity(int quantity);
     void SetDescription(const string& description);
     string GetName() const;
-    double GetCost() const;
+    double GetPrice() const;
     string GetDescription()const;
     int GetQuantity()const;
 
     private:
     string name;
-    double cost;
+    double price;
     int quantity;
     string description = "none";    
     
