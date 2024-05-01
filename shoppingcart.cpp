@@ -12,28 +12,9 @@ ShoppingCart::ShoppingCart() : customerName("none"), currentDate("January 1, 201
 ShoppingCart::ShoppingCart(const string& customerName, const string& currentDate) : customerName(customerName), currentDate(currentDate){}
 
 
-//getters from item files
-string ShoppingCart::GetName() const{
-    return itemName;
-}
-int ShoppingCart::GetQuantity() const{
-    return itemQuantity;
+//those need to be moved
 
-}
-double ShoppingCart::GetCost() const{
-    return itemCost;
-}
-string ShoppingCart::GetDescription() const{
-    return itemDescription;
-}
 
-//getters
-string ShoppingCart::GetCustomerName() const{
-    return customerName;
-}
-string ShoppingCart::GetDate() const {
-    return currentDate;
-}
 //adds the item to the cart by adding it to the vector
 //connected to shopping cart class and the item to purchase item
 
@@ -91,6 +72,12 @@ void ShoppingCart::PrintDescription() const {
     for(const auto& item : cartItems){
         cout << item.GetName() << item.GetDescription() << endl;
     }
+}
+string ShoppingCart::GetCustomerName() const{
+    return customerName;
+}
+string ShoppingCart::GetDate() const {
+    return currentDate;
 }
     
   
