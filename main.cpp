@@ -87,9 +87,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             cout << "QUIT" << endl;
             break;
         }
-        //placeholder...will have to check what zybooks wants
         default : {
-            cout << "Invalid entry" << endl;
             break;
         }
         }
