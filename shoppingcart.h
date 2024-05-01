@@ -7,27 +7,26 @@
 using namespace std;
 
 class ShoppingCart{
-    private:
+    public:
+        ShoppingCart();
+        ShoppingCart(const string& customerName, const string& currentDate);
+        
+        string GetCustomerName(const);
+        void AddItem(const ItemToPurchase& item);
+        string GetDate() const;
+        void RemoveItem(const string& itemName);
+        void ModifyItem(const ItemToPurchase& item);
+        double GetCost() const;
+        int GetQuantity() const;
+        string GetName()const;
+        string GetDescription() const;
+        void PrintTotal() const;
+        void PrintDescriptions()const;
+ private:
 
         string currentDate;
         string customerName;
         vector <ItemToPurchase> cartItems;
-    public:
-        ShoppingCart();
-        ShoppingCart(string& customerName, string& currentDate);
-        
-        string GetCustomerName(string customerName);
-       
-        void AddItem(ItemToPurchase& item);
-        string GetDate();
-        void RemoveItem(string& itemName);
-        void ModifyItem(ItemToPurchase& item);
-        double GetCost(double itemCost);
-        int GetQuantity(int itemQuantity);
-        string GetName();
-        string GetDescription(string itemDescription);
-        void PrintTotal();
-        void PrintDescriptions();
         
 
 
