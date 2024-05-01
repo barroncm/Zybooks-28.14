@@ -10,13 +10,13 @@ using namespace std;
     double cost = 0;
     string description = "";
 
-ItemToPurchase::ItemToPurchase(){  
+ItemToPurchase::ItemToPurchase() : name(""), cost(0), quantity(0), description("none"){  
 }
 
 
 //setters for basic elements
-//backwards
-void ItemToPurchase::SetName(string& itemName){
+//you did it backwards btw
+void ItemToPurchase::SetName(const string& itemName){
     name = itemName;
 }
 
@@ -28,18 +28,18 @@ void ItemToPurchase::SetQuantity(int itemQuantity){
     quantity = itemQuantity;
 }
 //added in step 1 of instructions
-void ItemToPurchase::SetItemDescription(string& itemDescription){
+void ItemToPurchase::SetItemDescription(const string& itemDescription){
     description = itemDescription;
 }
 
 //getters for basic elements
-string ItemToPurchase::GetName(string name){
+string ItemToPurchase::GetName() const{
     return name;
 }
-int ItemToPurchase::GetQuantity(int quantity){
+int ItemToPurchase::GetQuantity() const{
     return quantity;
 }
-double ItemToPurchase::GetCost(double cost){
+double ItemToPurchase::GetCost() const{
     return cost;
 }
 
@@ -47,7 +47,7 @@ double ItemToPurchase::GetCost(double cost){
 
 /*not sure what the format zybooks will want these to print in because it is very picky; 
 however, these are just filling in and can adjust later*/
-
+/*
 void ItemToPurchase::PrintItemCost(double itemCost){
     cout << "Here is the cost: " << itemCost << endl;
 }
@@ -59,3 +59,4 @@ void ItemToPurchase::PrintItemCost(int itemQuantity){
 void PrintItemDescription(string& description){
     cout << "Description of the item: " << description << endl;
 }
+ do these in a second*/ 
