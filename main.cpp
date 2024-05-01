@@ -44,7 +44,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             ItemToPurchase nextItem;
             nextItem.SetName(itemName);
             nextItem.SetDescription(itemDescription);
-            nextItem.SetPrice(itemCost);
+            nextItem.SetPrice(itemPrice);
             nextItem.SetQuantity(itemQuantity);
             theCart.AddItem(nextItem);
             break;
