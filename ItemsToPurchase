@@ -1,4 +1,4 @@
-//Caed Barron ; work done in VSC and the copied to GitHub and Zybooks
+//work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include "ItemToPurchase.h"
 #include <iomanip>
@@ -15,30 +15,31 @@ ItemToPurchase::ItemToPurchase(){
 
 
 //setters for basic elements
-void SetName(string itemName){
-    itemName = name;
+//backwards
+void ItemToPurchase::SetName(string itemName){
+    name = itemName;
 }
 
-void SetCost(double itemCost){
-    itemCost = cost;
+void ItemToPurchase::SetCost(double itemCost){
+    cost = itemCost;
 }
 
-void SetQuantity(int itemQuantity){
-    itemQuantity = quantity;
+void ItemToPurchase::SetQuantity(int itemQuantity){
+    quantity = itemQuantity;
 }
 //added in step 1 of instructions
-void SetItemDescription(string itemDescription){
-    itemDescription = description;
+void ItemToPurchase::SetItemDescription(string itemDescription){
+    description = itemDescription;
 }
 
 //getters for basic elements
-string GetName(string name){
+string ItemToPurchase::GetName(string name){
     return name;
 }
-int GetQuantity(int quantity){
+int ItemToPurchase::GetQuantity(int quantity){
     return quantity;
 }
-double GetCost(double cost){
+double ItemToPurchase::GetCost(double cost){
     return cost;
 }
 
@@ -47,11 +48,11 @@ double GetCost(double cost){
 /*not sure what the format zybooks will want these to print in because it is very picky; 
 however, these are just filling in and can adjust later*/
 
-void PrintItemCost(double itemCost){
+void ItemToPurchase::PrintItemCost(double itemCost){
     cout << "Here is the cost: " << itemCost << endl;
 }
 
-void PrintItemCost(int itemQuantity){
+void ItemToPurchase::PrintItemCost(int itemQuantity){
     cout << "Here is the quantity: " << itemQuantity << endl;
 }
 
