@@ -13,17 +13,18 @@ class ShoppingCart{
         string customerName;
         vector <ItemToPurchase> cartItems;
     public:
+        ShoppingCart();
         ShoppingCart(string customerName, string currentDate);
         
         string GetCustomerName(string customerName);
        
         void AddItem(ItemToPurchase item);
-        string GetDate(string currentDate);
+        string GetDate();
         void RemoveItem(string itemName);
-        void ModifyItem(string item);
+        void ModifyItem(ItemToPurchase item);
         double GetCost(double itemCost);
         int GetQuantity(int itemQuantity);
-        string GetName(string itemName);
+        string GetName();
         string GetDescription(string itemDescription);
         void PrintTotal();
         void PrintDescriptions();
