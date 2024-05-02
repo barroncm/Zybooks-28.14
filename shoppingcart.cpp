@@ -33,7 +33,8 @@ void ShoppingCart::RemoveItem(const string& itemName){
                 //fixed this btw
             cartItems.erase(cartItems.begin()+i); }
             return;
-        } }
+        } 
+        cout << "Item not found in cart. Nothing removed." << endl;
     
 void ShoppingCart::ModifyItem(const ItemToPurchase& item){
      for( unsigned int i = 0; i < cartItems.size(); i++){
