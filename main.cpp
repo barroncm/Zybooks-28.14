@@ -116,8 +116,9 @@ int main() {
     // i do not think that it matters but let me check
     // we have to do while loop with zybooks formatting
     while (optionReset != 'q'){
+        //my bad i forgot to add o
         if (optionReset == 'a' || optionReset == 'c' || optionReset == 'd' || optionReset == 'i' ||
-            optionReset == 'q'){
+            optionReset == 'q' || optionReset == 'o'){
             cout << endl;
             PrintMenu();
             cout << endl;}
