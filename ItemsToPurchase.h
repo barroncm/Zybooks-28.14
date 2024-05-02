@@ -9,6 +9,7 @@ using namespace std;
 class ItemToPurchase{
     public:
     ItemToPurchase();
+    ItemToPurchase(const string& itemName, const string& itemDescription, int itemPrice, int itemQuantity);  // this is the new constructor
     void SetName(const string& name);
     void SetPrice(double price);
     void SetQuantity(int quantity);
