@@ -51,7 +51,7 @@ double ItemToPurchase::GetPrice() const{
 however, these are just filling in and can adjust later*/
 
 void ItemToPurchase::PrintItemCost() const{
-    cout << name << " " << quantity << "$" price << "=$" << price*quantity << endl;
+    cout << name << " " << quantity << " @ $" << price << " = $" << price*quantity << endl;
 }
 
 void ItemToPurchase::PrintItemQuantity() const {
