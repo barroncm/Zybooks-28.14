@@ -31,8 +31,8 @@ void ShoppingCart::RemoveItem(const string& itemName){
     for( unsigned int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == itemName) {
                 //fixed this btw
-            cartItems.erase(cartItems.begin()+i); }
-            return;
+            cartItems.erase(cartItems.begin()+i); 
+            return;}}
         } 
         cout << "Item not found in cart. Nothing removed." << endl;
     
