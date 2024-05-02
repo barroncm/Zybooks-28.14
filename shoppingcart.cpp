@@ -69,8 +69,8 @@ void ShoppingCart::PrintTotal () const {
         //zybooks desired format
         for (const ItemToPurchase& item : cartItems){
                 item.PrintItemCost();}}
-        cout << endl;
-        cout << "Total: $" << GetCostOfCart() << endl << endl;
+     cout << endl;
+     cout << "Total: $" << GetCostOfCart() << endl << endl;
    
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
