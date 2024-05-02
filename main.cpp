@@ -1,4 +1,3 @@
-//main.cpp
 //work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include <iomanip>
@@ -35,7 +34,6 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             cin.ignore();
             cout << "Enter the item name:" << endl;
             getline(cin, itemName);
-            cin.ignore();
              cout << "Enter the item description:" << endl;
             getline(cin, itemDescription);
              cout << "Enter the item price:" << endl;
@@ -78,7 +76,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             break;
         }
         case 'i' : {
-            //needs to reference the cart on the other side
+            cout << "OUTPUT ITEMS' DESCRIPTIONS" << endl;
             theCart.PrintDescriptions();
             break;
         }
