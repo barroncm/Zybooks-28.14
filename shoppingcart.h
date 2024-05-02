@@ -1,4 +1,4 @@
-//sc.h
+//shoppingcart.h
 //Caed Barron ; work done in VSC and the copied to GitHub and Zybooks
 #ifndef SHOPPING_CART_H
 #define SHOPPING_CART_H
