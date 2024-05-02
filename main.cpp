@@ -1,3 +1,5 @@
+//contributors: Caedmon Barron and Jonah Swann
+
 //main.cpp - use the names so you can use windows + v to do multi-paste when you transfer to zybooks
 //work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
