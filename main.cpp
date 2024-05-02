@@ -80,6 +80,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
         }
         case'o': {
             //same issue
+            cout << "OUTPUT SHOPPING CART" << endl;
             theCart.PrintTotal();
             break;}
         
