@@ -1,4 +1,4 @@
-//ITP.H
+//ItemsToPurchase.h
 //Caed Barron ; work done in VSC and the copied to GitHub and Zybooks
 #ifndef ITEM_TO_PURCHASE_H
 #define ITEM_TO_PURCHASE_H
