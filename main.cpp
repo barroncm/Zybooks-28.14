@@ -85,7 +85,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
             break;}
         
         case 'q' : {
-            cout << "QUIT" << endl;
+
             break;
         }
         default : {
@@ -104,19 +104,20 @@ int main() {
    cout << "Enter today's date:" << endl << endl;
    getline(cin, currentDate);
    
-    char optionReset = '';
+    char optionReset = 'z';
     cout << "Customer name: " << customerName << endl;
     cout << "Today's date: " << currentDate << endl;
     ShoppingCart theCart(customerName, currentDate);
     cout << endl;
     PrintMenu();
     cout << endl;
+    cout << "Choose an option:" << endl;
     //im pretty sure this should be do while because the do while needs to check condition at the end
     // i do not think that it matters but let me check
     // we have to do while loop with zybooks formatting
     while (optionReset != 'q'){
         if (optionReset == 'a' || optionReset == 'c' || optionReset == 'd' || optionReset == 'i' ||
-            optionReset == 'q' || optionReset == ''){
+            optionReset == 'q'){
             cout << endl;
             PrintMenu();
             cout << endl;}
