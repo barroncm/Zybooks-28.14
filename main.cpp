@@ -17,7 +17,7 @@ void PrintMenu() {
     cout << "c - Change item quantity" << endl;
     cout << "i - Output items' descriptions" << endl;
     cout << "o - Output shopping cart" << endl;
-    cout << "q - Quit" << endl << endl;
+    cout << "q - Quit" << endl;
 
    
 }
@@ -104,7 +104,7 @@ int main() {
    cout << "Enter today's date:" << endl << endl;
    getline(cin, currentDate);
    
-    char option;
+    char optionReset = '';
     cout << "Customer name: " << customerName << endl;
     cout << "Today's date: " << currentDate << endl;
     ShoppingCart theCart(customerName, currentDate);
@@ -113,17 +113,16 @@ int main() {
     cout << endl;
     //im pretty sure this should be do while because the do while needs to check condition at the end
     // i do not think that it matters but let me check
-    do {
-        cout << "Choose an option:" << endl;
-        cin >> option;
-        if (option != 'q'){
-            ExecuteMenu(option, theCart);
-            if (option == 'a' || option == 'o' || option == 'd' || option == 'c'|| option == 'i') {
+    // we have to do while loop with zybooks formatting
+    while (optionReset != 'q'){
+        if (optionReset == 'a' || optionReset == 'c' || optionReset == 'd' || optionReset == 'i' ||
+            optionReset == 'q' || optionReset == ''){
             cout << endl;
             PrintMenu();
-            cout << endl;}}         
-    }while (option != 'q');
-  
+            cout << endl;}
+        cout << "Choose an option:" << endl;
+        cin >> optionReset;
+        ExecuteMenu(optionReset, theCart);}
    
    return 0;
 }
