@@ -45,15 +45,15 @@ double ItemToPurchase::GetPrice() const{
 /*not sure what the format zybooks will want these to print in because it is very picky; 
 however, these are just filling in and can adjust later*/
 
-void ItemToPurchase::PrintItemCost(){
+void ItemToPurchase::PrintItemCost() const{
     cout << name << " " << quantity << "$" price << "=$" << price*quantity << endl;
 }
 
-void ItemToPurchase::PrintItemQuantity() {
+void ItemToPurchase::PrintItemQuantity() const {
     cout << "Quantity: " << quantity << endl;
 }
 
-void PrintItemDescription()  {
+void ItemToPurchase::PrintItemDescription() const {
     cout << name << ": " << description << endl;
 }
  
