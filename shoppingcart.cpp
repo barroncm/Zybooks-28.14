@@ -1,4 +1,3 @@
-//shoppingcart.cpp
 //work done in VSC and the copied to GitHub and Zybooks
 #include <iostream>
 #include "ShoppingCart.h"
@@ -39,9 +38,10 @@ void ShoppingCart::RemoveItem(const string& itemName){
 void ShoppingCart::ModifyItem(const ItemToPurchase& item){
      for( unsigned int i = 0; i < cartItems.size(); i++){
         if(cartItems.at(i).GetName() == item.GetName()) {
-            cartItems.at(i).SetQuantity(item.GetQuantity());}
+            cartItems.at(i).SetQuantity(item.GetQuantity());
             return;
         }}
+        cout << "Item not found in cart. Nothing modified." << endl;}
 
 //simple fucntion that counts the number of items in the cart and omits ""s
 
@@ -76,8 +76,11 @@ void ShoppingCart::PrintTotal () const {
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
 void ShoppingCart::PrintDescriptions() const {
+    cout << customerName << "'s Shopping Cart - " << currentDate << endl;
+    cout << endl << "Item Descriptions" << endl;
+    
     for(const auto& item : cartItems){
-        cout << item.GetName() << item.GetDescription() << endl;
+        cout << item.GetName() <<": " << item.GetDescription() << endl;
     }
 }
 string ShoppingCart::GetCustomerName() const{
