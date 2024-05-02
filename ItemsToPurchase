@@ -10,9 +10,8 @@
 ItemToPurchase::ItemToPurchase() : name(""), price(0), quantity(0), description("none"){  
 }
 
-// New parameterized constructor
-ItemToPurchase::ItemToPurchase(const string& itemName, const string& itemDescription, int itemPrice, int itemQuantity)
-    : name(itemName), description(itemDescription), price(itemPrice), quantity(itemQuantity) {
+
+ItemToPurchase::ItemToPurchase(const string& itemName, const string& itemDescription, int itemPrice, int itemQuantity) : name(itemName), description(itemDescription), price(itemPrice), quantity(itemQuantity) {
 }
 
 
