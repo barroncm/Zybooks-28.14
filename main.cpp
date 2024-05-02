@@ -106,7 +106,7 @@ int main() {
    
     char option;
     cout << "Customer name: " << customerName << endl;
-    cout << "Today's date: " << currentDate << endl << endl;
+    cout << "Today's date: " << currentDate << endl;
     ShoppingCart theCart(customerName, currentDate);
     cout << endl;
     PrintMenu();
@@ -114,11 +114,14 @@ int main() {
     //im pretty sure this should be do while because the do while needs to check condition at the end
     // i do not think that it matters but let me check
     do {
-        cout << "Choose an option: " << endl;
+        cout << "Choose an option:" << endl;
         cin >> option;
         if (option != 'q'){
             ExecuteMenu(option, theCart);
-            PrintMenu();}         
+            if (option == 'a' || option == 'o' || option == 'd' || option == 'c'|| option == 'i') {
+            cout << endl;
+            PrintMenu();
+            cout << endl;}}         
     }while (option != 'q');
   
    
