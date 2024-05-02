@@ -17,8 +17,8 @@ void ItemToPurchase::SetName(const string& itemName){
     name = itemName;
 }
 
-void ItemToPurchase::SetPrice(double itemCost){
-    price = itemPrice;
+void ItemToPurchase::SetPrice(double itemPrice){
+    price = itemPrice; // correct the parameter name
 }
 
 void ItemToPurchase::SetQuantity(int itemQuantity){
