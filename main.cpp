@@ -28,18 +28,20 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
    string itemDescription;
    double itemPrice;
    int itemQuantity;
-   cin >> option;
 //added breaks
     switch(option){
         case 'a' : {
             cout << "ADD ITEM TO CART" << endl;
-            cout << "Enter the item name" << endl;
+            cin.ignore();
+            cout << "Enter the item name:" << endl;
             getline(cin, itemName);
-             cout << "Enter the item description" << endl;
+            cin.ignore();
+             cout << "Enter the item description:" << endl;
             getline(cin, itemDescription);
              cout << "Enter the item price:" << endl;
             cin >> itemPrice;
-            cout << "Enter the item quantity" << endl;
+            cin.ignore();
+            cout << "Enter the item quantity:" << endl;
             cin >> itemQuantity;
     
             ItemToPurchase nextItem;
@@ -53,6 +55,7 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
         }
         case 'd' : {
             cout << "REMOVE ITEM FROM CART" << endl;
+            cin.ignore();
             cout << "Enter name of item to remove:" << endl;
           
             getline(cin, itemName);
@@ -62,9 +65,10 @@ void ExecuteMenu(char option, ShoppingCart& theCart) {
         
         case 'c' : {
             cout << "CHANGE ITEM QUANTITY" << endl;
+            cin.ignore();
             cout << "Enter the item name:" << endl;
             getline(cin, itemName);
-            cout << "Enter the new quantity" << endl;
+            cout << "Enter the new quantity:" << endl;
             cin >> itemQuantity;
            //this needs be done differently
             ItemToPurchase modifiedItem;
@@ -100,9 +104,12 @@ int main() {
    string customerName;
     string currentDate;
    cout << "Enter customer's name:" << endl;
+   
    getline(cin, customerName);
+
    cout << "Enter today's date:" << endl << endl;
    getline(cin, currentDate);
+  
    
     char optionReset = 'z';
     cout << "Customer name: " << customerName << endl;
@@ -111,7 +118,6 @@ int main() {
     cout << endl;
     PrintMenu();
     cout << endl;
-    cout << "Choose an option:" << endl;
     //im pretty sure this should be do while because the do while needs to check condition at the end
     // i do not think that it matters but let me check
     // we have to do while loop with zybooks formatting
