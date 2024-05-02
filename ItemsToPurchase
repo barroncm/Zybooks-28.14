@@ -58,5 +58,6 @@ void ItemToPurchase::PrintItemDescription() const {
     cout << name << ": " << description << endl;
 }
  
-string ItemToPurchase::GetDescription(){
-return description;}
+string ItemToPurchase::GetDescription() const {
+    return description;
+}
