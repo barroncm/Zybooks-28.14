@@ -70,7 +70,7 @@ void ShoppingCart::PrintTotal () const {
         for (const ItemToPurchase& item : cartItems){
                 item.PrintItemCost();}}
         cout << endl;
-        cout << "Total: $:" << GetCostOfCart() << endl << endl;
+        cout << "Total: $" << GetCostOfCart() << endl << endl;
    
 }
 //cycles through the names in the cartItems vector and then prints the name and the description for each
